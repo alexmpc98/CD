@@ -131,18 +131,13 @@ print("Factorial 3 - ", factorialVariable);
 #6.2 - Função recursiva para calcular a soma dos n primeiros números inteiros
 
 def sumfirstnumbers(n):
-    sum = 0;
-    FinalNum = n;
-    if n <= 0:
-        return 0;
-    else:
-        while n > 0:
-            sum = sum + n;
-            n = n-1;
+    if n <= 1:
+        return n;
+    return n + sumfirstnumbers(n-1);
+        
 
-        print("A soma dos ", FinalNum , "primeiros números é : ", sum);
-
-sumFN = sumfirstnumbers(4);
+sumFN = sumfirstnumbers(5);
+print(sumFN);
 
 
 #6.3 - Função recursiva Fibonacci
