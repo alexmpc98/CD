@@ -36,17 +36,15 @@ print(a.__str__())
 
 # 2 - Herança
 class Square(Rectangle):
-    squareSize = 0
 
-    def __init__(self,x1,y1, squareSize):
+    def __init__(self,x1,y1):
         super().__init__(x1,y1,0,0)
-        self.squareSize = squareSize
+        self.squareSize = self.area()
 
     def __str__(self):
         return 'Coordinates: (' + str(self.x1) + ',' + str(self.y1) + '); Area:' + str(self.squareSize) + 'm²'
 
-
-b = Square(1,4,10)
+b = Square(1,4)
 print(b.__str__())
 
 
